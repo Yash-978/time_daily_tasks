@@ -1,4 +1,4 @@
-import 'package:android_studio_project/main.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -111,46 +111,21 @@ class _ButtonsState extends State<Buttons> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ElevatedButton(onPressed: (){
+                    OutlinedButton(onPressed: (){
 
-                    }, child: Row(
-                      children: [
-                        Icon(Icons.ac_unit),
-                        Text('cooling'),
-                      ],
-                    )),
-                    ElevatedButton(onPressed: (){
+                    }, child: Text('Hey')),
+                    OutlinedButton(onPressed: (){
 
-                    }, child: Row(
-                      children: [
-                        Icon(Icons.access_time_filled_rounded),
-                        Text('Time'),
-                      ],
-                    )),
-                    ElevatedButton(onPressed: (){
+                    }, child: Text('hola')),
+                    OutlinedButton(onPressed: (){
 
-                    }, child: Row(
-                      children: [
-                        Icon(Icons.accessibility_rounded),
-                        Text('Accessibility'),
-                      ],
-                    )),
-                    ElevatedButton(onPressed: (){
+                    }, child: Text('Bonjour')),
+                    OutlinedButton(onPressed: (){
 
-                    }, child: Row(
-                      children: [
-                        Icon(Icons.adb),
-                        Text('Android'),
-                      ],
-                    )),
-                    ElevatedButton(onPressed: (){
+                    }, child: Text('Hello')),
+                    OutlinedButton(onPressed: (){
 
-                    }, child: Row(
-                      children: [
-                        Icon(Icons.add_call),
-                        Text('Call'),
-                      ],
-                    )),
+                    }, child: Text('Ciao')),
                   ],
                 )
 
