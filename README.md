@@ -2,10 +2,19 @@
 
 
 <h3 align = "center"> 1. Flutter buttons </h3>
+
 <p align = "center">
-<img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/e2f8658d-552e-49c9-82dd-759227b28155 width=35%
-"height="550" >
+<img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/85a01de1-df25-48da-af6b-128c40873372" width=35%
+height=22% >
 </p>
+<p>
+<video src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/815d53fe-fcd7-4136-a857-17e7a3a31b14" width=35%
+height=22% >
+</p>
+
+
+
+
 
 # 1. What is  Asynchronous Programming?
 
