@@ -3,7 +3,7 @@
 
 <h3 align = "center"> 1. Flutter buttons </h3>
 <p align = "center">
-<img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/e2f8658d-552e-49c9-82dd-759227b28155
+<img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/e2f8658d-552e-49c9-82dd-759227b28155 width=35%
 "height="550" >
 </p>
 
