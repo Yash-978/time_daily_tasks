@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:math';
 
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CloakApp extends StatefulWidget {
   const CloakApp({super.key});
@@ -18,9 +20,7 @@ class _CloakAppState extends State<CloakApp> {
         datetime = DateTime.now();
         if (datetime.hour > 11) {
           meridian = 'PM';
-        }
-        else
-        {
+        } else {
           meridian = 'AM';
         }
         switch (datetime.weekday) {
@@ -50,26 +50,26 @@ class _CloakAppState extends State<CloakApp> {
     });
     return SafeArea(
       child: Scaffold(
-
         body: Container(
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
-              image: DecorationImage(
-            fit: BoxFit.cover,
-            // image: AssetImage('Asset/images/astronaut-4106766_1920.jpg'),
-            image: NetworkImage(
-                'https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?q=80&w=2153&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
-          ),
+            image: DecorationImage(
+              // opacity: 0,
+              fit: BoxFit.cover,
+              // image: AssetImage('Asset/images/astronaut-4106766_1920.jpg'),
+              image: NetworkImage(
+                  'https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&w=600'),//https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?q=80&w=2153&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+            ),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(mainAxisAlignment: MainAxisAlignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '${datetime.hour
-                    } : ${datetime.minute} : ${datetime.second}',
+                    '${datetime.hour % 12} : ${datetime.minute} : ${datetime.second}',
                     style: TextStyle(fontSize: 50, color: Colors.white),
                   ),
                   Container(
@@ -82,11 +82,84 @@ class _CloakAppState extends State<CloakApp> {
                   ),
                 ],
               ),
-
               Text(
                 '${Day}',
                 style: TextStyle(fontSize: 35, color: Colors.white),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 3,
+                    )),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      height: 10,
+                      width: 10,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.cyan,
+                      ),
+                    ),
+                    ...List.generate(
+                      60,
+                      (index) => Transform.rotate(
+                          angle: ((index + 1) * 6 * pi) / 180,
+                          child: ((index + 1) % 5 == 0)
+                              ? VerticalDivider(
+                                  thickness: 3,
+                                  color: Colors.red,
+                                  endIndent: 170,
+                                  indent: 2,
+                                )
+                              : VerticalDivider(
+                                  thickness: 2,
+                                  color: Colors.white,
+                                  endIndent: 180,
+                                  indent: 3,
+                                )),
+                    ),
+                    Transform.rotate(
+                      angle: (datetime.hour % 12 + datetime.minute / 60) *
+                          30 *
+                          pi /
+                          180,
+                      child: VerticalDivider(
+                        thickness: 4,
+                        color: Colors.amber,
+                        endIndent: 97,
+                        indent: 40,
+                      ),
+                    ),
+                    Transform.rotate(
+                      angle: datetime.minute * (6 * pi) / 180,
+                      child: VerticalDivider(
+                        thickness: 3,
+                        color: Colors.cyan,
+                        endIndent: 97,
+                        indent: 25,
+                      ),
+                    ),
+                    Transform.rotate(
+                      angle: datetime.second * (6 * pi) / 180,
+                      child: VerticalDivider(
+                        thickness: 2,
+                        color: Colors.white,
+                        endIndent: 97,
+                        indent: 17,
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
