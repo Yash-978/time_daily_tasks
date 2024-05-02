@@ -27,7 +27,8 @@ height=22% >
 </p>
 
 <div align = "center">
-<video src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/d560e525-b400-406c-b786-3bcb50244ec7"  >
+<video src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/d560e525-b400-406c-b786-3bcb50244ec7" width=35%
+height=22% >
 </div>
 
 
