@@ -68,7 +68,8 @@ class _CloakAppState extends State<CloakApp> {
               Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '${datetime.hour % 12} : ${datetime.minute} : ${datetime.second}',
+                    '${datetime.hour
+                    } : ${datetime.minute} : ${datetime.second}',
                     style: TextStyle(fontSize: 50, color: Colors.white),
                   ),
                   Container(
