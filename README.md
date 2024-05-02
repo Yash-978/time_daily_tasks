@@ -7,6 +7,9 @@
 <img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/85a01de1-df25-48da-af6b-128c40873372" width=35%
 height=22% >
 </p>
+
+<h3 align = "center"> 2. Digital Clock App </h3>
+
 <p align = "center">
 <img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/b342b386-3974-4526-ae6f-e6744a3fef7d" width=35%
 height=22% >
