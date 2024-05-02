@@ -59,7 +59,7 @@ class _CloakAppState extends State<CloakApp> {
             fit: BoxFit.cover,
             // image: AssetImage('Asset/images/astronaut-4106766_1920.jpg'),
             image: NetworkImage(
-                'https://i.pinimg.com/236x/b7/44/dc/b744dca20792b2d10849decf9b3750e0.jpg'),
+                'https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?q=80&w=2153&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
           ),
           ),
           child: Column(
@@ -69,7 +69,7 @@ class _CloakAppState extends State<CloakApp> {
                 children: [
                   Text(
                     '${datetime.hour % 12} : ${datetime.minute} : ${datetime.second}',
-                    style: TextStyle(fontSize: 60, color: Colors.white),
+                    style: TextStyle(fontSize: 50, color: Colors.white),
                   ),
                   Container(
                     // height: 10,
