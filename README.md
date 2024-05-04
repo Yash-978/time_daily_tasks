@@ -14,10 +14,26 @@ height=22% >
 <img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/b342b386-3974-4526-ae6f-e6744a3fef7d" width=35%
 height=22% >
 </p>
-<p>
+<div align ="center">
 <video src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/815d53fe-fcd7-4136-a857-17e7a3a31b14" width=35%
 height=22% >
+</div>
+    
+<h3 align = "center"> 3. Analogue Clock App </h3>
+
+<p align = "center">
+<img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/707068e2-1cdb-40b2-a081-c980adf44b3b" width=35%
+height=22% >
 </p>
+
+<div align = "center">
+<video src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/d560e525-b400-406c-b786-3bcb50244ec7" width=35%
+height=22% >
+</div>
+
+
+
+
 
 
 
