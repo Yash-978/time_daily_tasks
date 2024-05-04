@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Analogue_clock/analogueClock.dart';
+import 'Strap_watch/strap_Watch.dart';
 import 'TimerApp/TimerApp.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CloakApp(),
+      home: StrapWatch(),
     );
   }
 }
