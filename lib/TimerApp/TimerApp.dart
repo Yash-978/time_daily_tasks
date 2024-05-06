@@ -81,7 +81,8 @@ class _CloakAppState extends State<CloakApp> {
               fit: BoxFit.cover,
               // image: AssetImage('Asset/images/astronaut-4106766_1920.jpg'),
               image: NetworkImage(
-                  'https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&w=600'),//https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?q=80&w=2153&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                  'https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&w=600'),
+              //https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?q=80&w=2153&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
             ),
           ),
           child: Column(
