@@ -31,6 +31,21 @@ height=22% >
 height=22% >
 </div>
 
+<h3 align = "center"> 4. Strap Watch </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/2d1defe4-dddd-44c2-9e8a-a7afd86bf57a" width=35%
+height=22% >
+</p>
+
+<div align = "center">
+<video src= "https://github.com/Yash-978/time_daily_tasks/assets/147479013/5348efe5-0ec8-4678-91eb-43ef1cf6024d" width=35%
+height=22% >
+</div>
+
+
+
+
+
 
 
 
