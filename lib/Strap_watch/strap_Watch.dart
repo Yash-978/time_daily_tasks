@@ -86,10 +86,33 @@ class _StrapWatchState extends State<StrapWatch> {
       });
     });
     return Scaffold(
+      bottomNavigationBar: BottomAppBar(
+        // shape: CircularNotchedRectangle(),
+        color: Colors.black,
+
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            FilledButton.tonal(onPressed: (){
+              Navigator.pushNamed(context, '/digital');
+            }, child: Text('Digital')),
+            FilledButton.tonal(onPressed: (){
+              Navigator.pushNamed(context, '/analog');
+
+            }, child: Text('Analog')),
+            FilledButton.tonal(onPressed: (){
+              Navigator.pushNamed(context, '/strap');
+
+            }, child: Text('Strap')),
+          ],
+        ),
+      ),
+
       body: Container(
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
+
           image: DecorationImage(
               fit: BoxFit.fill,
               image: NetworkImage(
@@ -98,76 +121,71 @@ class _StrapWatchState extends State<StrapWatch> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 250,
-              width: 250,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Colors.white, width: 0.01),
-              ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  SizedBox(
-                    height: 240,
-                    width: 240,
-                    child: CircularProgressIndicator(
-                      color: Colors.white,
-                      value: datetime.second / 60,
-                      strokeWidth: 7,
-                    ),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                SizedBox(
+                  height: 240,
+                  width: 240,
+                  child: CircularProgressIndicator(
+                    color: Colors.deepOrange,
+                    value: datetime.second / 60,
+                    strokeWidth: 7,
                   ),
-                  SizedBox(
-                    height: 230,
-                    width: 230,
-                    child: CircularProgressIndicator(
-                      color: Colors.blueAccent,
-                      value: datetime.minute / 60,
-                      strokeWidth: 7,
-                    ),
+                ),
+                SizedBox(
+                  height: 230,
+                  width: 230,
+                  child: CircularProgressIndicator(
+                    color: Colors.white,
+                    value: datetime.minute / 60,
+                    strokeWidth: 7,
                   ),
-                  SizedBox(
-                    height: 220,
-                    width: 220,
-                    child: CircularProgressIndicator(
-                      color: Colors.deepOrange,
-                      value: ((datetime.hour % 12 + datetime.minute/60)/12),
-                      strokeWidth: 7,
-                    ),
+                ),
+                SizedBox(
+                  height: 220,
+                  width: 220,
+                  child: CircularProgressIndicator(
+                    color: Colors.green,
+                    value: ((datetime.hour % 12 + datetime.minute/60)/12),
+                    strokeWidth: 7,
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
 
-                      Text(Day,style: TextStyle(
-                      fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
-                    ),),
-                      Text('$month ${datetime.day},${datetime.year}' ,style: TextStyle(
-                      fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
-                    ),),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('${datetime.hour%12}:${datetime.minute}:${datetime.second}' ,style: TextStyle(
-                            fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                    Text(Day,style: TextStyle(
+                    fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                  ),),
+                    Text('$month ${datetime.day},${datetime.year}' ,style: TextStyle(
+                    fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                  ),),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('${datetime.hour%12}:${datetime.minute}:${datetime.second}' ,style: TextStyle(
+                          fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                        ),),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5),
+                          child: Text(' $meridian' ,style: TextStyle(
+                            fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold,
                           ),),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5),
-                            child: Text(' $meridian' ,style: TextStyle(
-                              fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold,
-                            ),),
-                          ),
-                        ],
-                      )
+                        ),
+                      ],
+                    )
 
-                    ],
-                  )
-                ],
-              ),
-            )
+                  ],
+                )
+              ],
+            ),
+
           ],
+
         ),
       ),
+
     );
   }
 }

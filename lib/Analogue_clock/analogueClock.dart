@@ -47,6 +47,26 @@ class _AnalogueClockState extends State<AnalogueClock> {
     });
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: BottomAppBar(
+          // shape: CircularNotchedRectangle(),
+          color: Colors.black,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              FilledButton.tonal(onPressed: (){
+                Navigator.pushNamed(context, '/digital');
+              }, child: Text('Digital')),
+              FilledButton.tonal(onPressed: (){
+                Navigator.pushNamed(context, '/analog');
+
+              }, child: Text('Analog')),
+              FilledButton.tonal(onPressed: (){
+                Navigator.pushNamed(context, '/strap');
+
+              }, child: Text('Strap')),
+            ],
+          ),
+        ),
         body: Container(
           height: double.infinity,
           width: double.infinity,

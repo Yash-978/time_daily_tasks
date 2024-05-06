@@ -14,7 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StrapWatch(),
+      // home: StrapWatch(),
+      initialRoute: '/digital',
+      routes: {
+        '/digital':(context)=>CloakApp(),
+        '/analog':(context)=>AnalogueClock(),
+        '/strap':(context)=>StrapWatch(),
+      },
     );
   }
 }
