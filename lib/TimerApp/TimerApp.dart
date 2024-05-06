@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:math';
+// import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -111,77 +111,7 @@ class _CloakAppState extends State<CloakApp> {
               SizedBox(
                 height: 20,
               ),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: Colors.white,
-                      width: 3,
-                    )),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Container(
-                      height: 10,
-                      width: 10,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.cyan,
-                      ),
-                    ),
-                    ...List.generate(
-                      60,
-                      (index) => Transform.rotate(
-                          angle: ((index + 1) * 6 * pi) / 180,
-                          child: ((index + 1) % 5 == 0)
-                              ? VerticalDivider(
-                                  thickness: 3,
-                                  color: Colors.red,
-                                  endIndent: 170,
-                                  indent: 2,
-                                )
-                              : VerticalDivider(
-                                  thickness: 2,
-                                  color: Colors.white,
-                                  endIndent: 180,
-                                  indent: 3,
-                                )),
-                    ),
-                    Transform.rotate(
-                      angle: (datetime.hour % 12 + datetime.minute / 60) *
-                          30 *
-                          pi /
-                          180,
-                      child: VerticalDivider(
-                        thickness: 4,
-                        color: Colors.amber,
-                        endIndent: 97,
-                        indent: 40,
-                      ),
-                    ),
-                    Transform.rotate(
-                      angle: datetime.minute * (6 * pi) / 180,
-                      child: VerticalDivider(
-                        thickness: 3,
-                        color: Colors.cyan,
-                        endIndent: 97,
-                        indent: 25,
-                      ),
-                    ),
-                    Transform.rotate(
-                      angle: datetime.second * (6 * pi) / 180,
-                      child: VerticalDivider(
-                        thickness: 2,
-                        color: Colors.white,
-                        endIndent: 97,
-                        indent: 17,
-                      ),
-                    ),
-                  ],
-                ),
-              )
+
             ],
           ),
         ),

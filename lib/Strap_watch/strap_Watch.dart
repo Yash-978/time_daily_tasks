@@ -156,21 +156,21 @@ class _StrapWatchState extends State<StrapWatch> {
                   children: [
 
                     Text(Day,style: TextStyle(
-                    fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                    fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold,
                   ),),
                     Text('$month ${datetime.day},${datetime.year}' ,style: TextStyle(
-                    fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                    fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold,
                   ),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('${datetime.hour%12}:${datetime.minute}:${datetime.second}' ,style: TextStyle(
-                          fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                          fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold,
                         ),),
                         Padding(
                           padding: const EdgeInsets.only(top: 5),
                           child: Text(' $meridian' ,style: TextStyle(
-                            fontSize: 10,color: Colors.white,fontWeight: FontWeight.bold,
+                            fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold,
                           ),),
                         ),
                       ],
